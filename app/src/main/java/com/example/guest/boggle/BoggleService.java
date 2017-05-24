@@ -73,10 +73,8 @@ public class BoggleService {
 
         if (counter >= 3){
             return true;
-        }else if (counter <= 2){
+        }else {
             return false;
-        }else{
-            return null;
         }
     }
 

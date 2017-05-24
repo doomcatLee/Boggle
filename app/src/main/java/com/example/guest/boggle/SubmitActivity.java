@@ -37,7 +37,10 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v){
         Intent intent = new Intent(SubmitActivity.this, ResultActivity.class);
         String userInput = mUserInput.getText().toString();
+        String randomString = mRandomString.getText().toString();
+
         intent.putExtra("userInput", userInput);
+        intent.putExtra("randomString", randomString);
         startActivity(intent);
     }
 
