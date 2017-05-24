@@ -1,9 +1,18 @@
 package com.example.guest.boggle;
 
 
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.util.Log;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.Scanner;
 
 public class BoggleService {
 
@@ -56,14 +65,17 @@ public class BoggleService {
         return output;
     }
 
+
     public Boolean validator(String input){
         char[] userInputChar = input.toCharArray();
         char[] randomTextChar = this.randomString.toCharArray();
         int counter = 0;
 
+
+
         for (int i=0; i < userInputChar.length; i++){
             for(int k=0; k < randomTextChar.length; k++){
-                if (i == k){
+                if (userInputChar[i] == randomTextChar[k]){
                     counter++;
                 }else{
                     continue;
@@ -71,11 +83,13 @@ public class BoggleService {
             }
         }
 
+
         if (counter >= 3){
             return true;
         }else {
             return false;
         }
     }
+
 
 }
