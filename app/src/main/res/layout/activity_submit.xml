@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.guest.boggle.SubmitActivity">
+
+    <TextView
+        android:id="@+id/randomStringTextView"
+        android:layout_width="214dp"
+        android:layout_height="51dp"
+        android:text="Test string"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your randomly generated text:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="339dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Type a word"
+        tools:layout_editor_absoluteY="197dp"
+        tools:layout_editor_absoluteX="23dp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="447dp" />
+</android.support.constraint.ConstraintLayout>
