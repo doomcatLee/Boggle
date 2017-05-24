@@ -1,30 +1,43 @@
 package com.example.guest.boggle;
 
-import org.junit.Test;
+
+import android.util.Log;
 
 import java.util.Random;
 
-import static org.junit.Assert.*;
+public class BoggleService {
 
-public class ExampleUnitTest {
+
+    private String userInput;
+    private String randomString;
 
     private String[] consonants = {"b", "c", "d", "f", "g","h","i","j","k","l","m","n", "p", "q", "r", "s", "t", "v", "w", "x","z"};
     private String[] vowels = {"a", "e", "i", "o","u"};
+//    private String[] master = {"b", "c", "d", "f", "g","h","i","j","k","l","m","n", "p", "q", "r", "s", "t", "v", "w", "x","z"};
 
-    @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public BoggleService(String userInput, String randomString){
+        this.userInput = userInput;
+        this.randomString = randomString;
     }
 
-    @Test
-    public void testRandomNumber() throws Exception{
-        Random randomNumber = new Random();
-        int test = randomNumber.nextInt(20);
-        assertEquals(3, test);
+    public String getUserInput(){
+        return userInput;
     }
 
-    @Test
-    public void testTextGenerator() throws Exception{
+    public String getRandomString(){
+        return randomString;
+    }
+
+    public void setUserInput(String a){
+        this.userInput = a;
+    }
+
+    public void setRandomString(String a){
+        this.randomString = a;
+    }
+
+
+    public String textGenerator(){
         String output= "";
 
         //Consontants for loop
@@ -41,27 +54,12 @@ public class ExampleUnitTest {
             output += vowels[number];
         }
 
-        assertEquals("asdasdasd", output);
+        return output;
     }
 
-
-    @Test
-    public void test222() throws Exception{
-        System.out.println("test");
-        String test = "abpohsi";
-//        String[] userInput = test.split(",");
-        char [] userInput = test.toCharArray();
-        for (int i =0; i< userInput.length; i++)
-            System.out.println(userInput[i]);
-        assertEquals("b",userInput[0]);
-    }
-
-    @Test
-    public void test111() throws Exception{
-        String input = "pois";
-        String randomString = "pgaoxids";
+    public Boolean validator(String input){
         char[] userInputChar = input.toCharArray();
-        char[] randomTextChar = randomString.toCharArray();
+        char[] randomTextChar = this.randomString.toCharArray();
         int counter = 0;
 
 
@@ -75,6 +73,13 @@ public class ExampleUnitTest {
             }
         }
 
-    assertEquals(4, counter);
+        if (counter >= 3){
+            return true;
+        }else if (counter <= 2){
+            return false;
+        }else{
+            return null;
+        }
     }
+
 }
