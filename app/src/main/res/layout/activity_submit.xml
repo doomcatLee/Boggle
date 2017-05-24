@@ -32,7 +32,7 @@
         android:layout_marginTop="50dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/userInputEditText"
         android:layout_width="339dp"
         android:layout_height="46dp"
         android:ems="10"
