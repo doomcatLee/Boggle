@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +14,10 @@
         android:textSize="36sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="78dp" />
+        tools:layout_editor_absoluteY="78dp"
+        android:layout_below="@+id/infoTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
 
     <TextView
         android:id="@+id/infoTextView"
@@ -23,7 +26,10 @@
         android:text="Your randomly generated text:"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="32dp" />
+        tools:layout_editor_absoluteY="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
     <EditText
         android:id="@+id/editText"
@@ -33,7 +39,10 @@
         android:inputType="textPersonName"
         android:hint="Type a word"
         tools:layout_editor_absoluteY="197dp"
-        tools:layout_editor_absoluteX="23dp" />
+        tools:layout_editor_absoluteX="23dp"
+        android:layout_below="@+id/randomStringTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp" />
 
     <Button
         android:id="@+id/submitButton"
@@ -41,5 +50,8 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="447dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="447dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>
