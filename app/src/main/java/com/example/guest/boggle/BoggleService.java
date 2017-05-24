@@ -13,7 +13,6 @@ public class BoggleService {
 
     private String[] consonants = {"b", "c", "d", "f", "g","h","i","j","k","l","m","n", "p", "q", "r", "s", "t", "v", "w", "x","z"};
     private String[] vowels = {"a", "e", "i", "o","u"};
-//    private String[] master = {"b", "c", "d", "f", "g","h","i","j","k","l","m","n", "p", "q", "r", "s", "t", "v", "w", "x","z"};
 
     public BoggleService(String userInput, String randomString){
         this.userInput = userInput;
@@ -61,7 +60,6 @@ public class BoggleService {
         char[] userInputChar = input.toCharArray();
         char[] randomTextChar = this.randomString.toCharArray();
         int counter = 0;
-
 
         for (int i=0; i < userInputChar.length; i++){
             for(int k=0; k < randomTextChar.length; k++){
