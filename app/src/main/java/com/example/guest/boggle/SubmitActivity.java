@@ -30,6 +30,10 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
 
         mSubmitButton.setOnClickListener(this);
         mRandomString.setText(service1.textGenerator());
+//        String[] wordsArray = service1.inputText();
+        for (int i=0;i<10;i++){
+            System.out.println("hello");
+        }
 
     }
 

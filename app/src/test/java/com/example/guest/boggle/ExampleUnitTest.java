@@ -2,6 +2,11 @@ package com.example.guest.boggle;
 
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Random;
 
 import static org.junit.Assert.*;
@@ -76,5 +81,35 @@ public class ExampleUnitTest {
         }
 
     assertEquals(4, counter);
+    }
+
+    @Test
+    public void dataOutputTest() throws Exception{
+        FileInputStream fis = new FileInputStream("/Users/doomcat/boggle/app/src/main/assets/words.txt");
+
+        InputStreamReader isr = new InputStreamReader(fis);
+        BufferedReader br = new BufferedReader(isr);
+
+
+        try
+        {
+            fis.getChannel().position(0);
+        }
+        catch (IOException e) {e.printStackTrace();}
+
+        String[] array = new String[number];
+
+        String line;
+        int i = 0;
+        try
+        {
+            while((line=br.readLine())!=null)
+            {
+                array[i] = line;
+                i++;
+            }
+        }
+        catch (IOException e) {e.printStackTrace();}
+        assertEquals(array.length, "asdas");
     }
 }

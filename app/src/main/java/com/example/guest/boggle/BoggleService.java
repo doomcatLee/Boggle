@@ -3,9 +3,14 @@ package com.example.guest.boggle;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.os.Environment;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -72,24 +77,23 @@ public class BoggleService {
         int counter = 0;
 
 
-
-        for (int i=0; i < userInputChar.length; i++){
-            for(int k=0; k < randomTextChar.length; k++){
-                if (userInputChar[i] == randomTextChar[k]){
+        for (int i = 0; i < userInputChar.length; i++) {
+            for (int k = 0; k < randomTextChar.length; k++) {
+                if (userInputChar[i] == randomTextChar[k]) {
                     counter++;
-                }else{
+                } else {
                     continue;
                 }
             }
         }
 
 
-        if (counter >= 3){
+        if (counter >= 3) {
             return true;
-        }else {
+        } else {
             return false;
         }
+
+
     }
-
-
 }
